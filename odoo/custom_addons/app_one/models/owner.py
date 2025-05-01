@@ -6,3 +6,6 @@ class Owner(models.Model):
     phone = fields.Char()
     email = fields.Char()
     address = fields.Text()
+    property_ids = fields.One2many('property', 'owner_id')
+    tag_ids = fields.Many2many('tag')
+

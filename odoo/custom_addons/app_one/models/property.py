@@ -15,6 +15,8 @@ class Property(models.Model):
     garden = fields.Boolean()
     garden_area = fields.Integer(default=0)
     owner_id = fields.Many2one('owner', string='Owner')
+    tag_ids = fields.Many2many('tag')
+
     garden_orientation = fields.Selection([
         ('north', 'North'),
         ('south', 'South'),
